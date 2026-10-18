@@ -3,7 +3,7 @@ public:
     bool canFinish(int n, vector<vector<int>>& prerequisites) {
         vector<int> graph[n], in(n, 0); 
         queue<int> q; 
-        for(auto i : prerequisites){
+        for(auto &i : prerequisites){
             graph[i[1]].push_back(i[0]); 
             in[i[0]]++;    
         }
