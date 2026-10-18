@@ -15,9 +15,7 @@ public:
         if(!root) return NULL; 
         TreeNode* right = invertTree(root->right); 
         TreeNode* left  = invertTree(root->left ); 
-        TreeNode* temp = right; 
-        root->right = left;
-        root->left = temp; 
+        swap(root->left, root->right);
         return root;
     }
 };
